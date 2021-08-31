@@ -2,12 +2,12 @@
 {
     public struct ResultCode
     {
-        public const int Success = 0;
+        public static readonly int Success = 0;
 
-        public const int DefaultError = 1000;
+        public static int DefaultError = 1000;
 
-        public int Unauthorized => DefaultError + 1;
+        public static int Unauthorized => DefaultError + 1;
 
-        public int InvalidRequest => DefaultError + 2;
+        public static int InvalidRequest => DefaultError + 2;
     }
 }

@@ -32,6 +32,11 @@
         {
             return new Result { Code = code, Message = message };
         }
+
+        public static IResult FromResult(IResult result)
+        {
+            return new Result { Code = result.Code, Message = result.Message };
+        }
     }
 
     public class Result<T> : Result, IResult<T>
@@ -73,6 +78,11 @@
         public static IResult<T> Fail(string message, T data, int code = ResultCode.DefaultError)
         {
             return new Result<T> { Code = code, Data = data, Message = message };
+        }
+
+        public static Result<T> FromData(T data)
+        {
+            return new Result<T> { Code = ResultCode.Success, Data = data };
         }
     }
 }
