@@ -18,7 +18,7 @@
             return new Result { Code = ResultCode.Success, Message = message };
         }
 
-        public static IResult Fail(int code = ResultCode.DefaultError)
+        public static IResult Fail(int code)
         {
             return new Result { Code = code };
         }
@@ -65,17 +65,17 @@
             return new Result<T> { Code = ResultCode.Success, Message = message, Data = data };
         }
 
-        public static new IResult<T> Fail(int code = ResultCode.DefaultError)
+        public static new IResult<T> Fail(int code)
         {
             return new Result<T> { Code = code };
         }
 
-        public static IResult<T> Fail(string message, int code = ResultCode.DefaultError)
+        public static IResult<T> Fail(string message, int code)
         {
             return new Result<T> { Code = code, Message = message };
         }
 
-        public static IResult<T> Fail(string message, T data, int code = ResultCode.DefaultError)
+        public static IResult<T> Fail(string message, T data, int code)
         {
             return new Result<T> { Code = code, Data = data, Message = message };
         }
