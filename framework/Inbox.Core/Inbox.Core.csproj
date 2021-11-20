@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Attributes\" />
+    <Folder Include="DistributedLock\Attributes\" />
   </ItemGroup>
 
   <ItemGroup>
