@@ -29,9 +29,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inbox.Jwt", "framework\Inbo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inbox.DistributedLock.Redis", "framework\Inbox.DistributedLock.Redis\Inbox.DistributedLock.Redis.csproj", "{8CCCF4A7-247F-43A0-BCD7-BD62483CCAB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inbox.ServiceDiscovery", "framework\Inbox.ServiceDiscovery\Inbox.ServiceDiscovery.csproj", "{C3494193-5202-4EB6-8D92-2307CD7A141F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inbox.ServiceDiscovery", "framework\Inbox.ServiceDiscovery\Inbox.ServiceDiscovery.csproj", "{C3494193-5202-4EB6-8D92-2307CD7A141F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inbox.ServiceDiscovery.Consul", "framework\Inbox.ServiceDiscovery.Consul\Inbox.ServiceDiscovery.Consul.csproj", "{FB1A078B-BD31-4CEA-BDBD-9DDA989E2218}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inbox.ServiceDiscovery.Consul", "framework\Inbox.ServiceDiscovery.Consul\Inbox.ServiceDiscovery.Consul.csproj", "{FB1A078B-BD31-4CEA-BDBD-9DDA989E2218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inbox.Sample.ServiceDiscovery.Consul", "samples\Inbox.Sample.ServiceDiscovery.Consul\Inbox.Sample.ServiceDiscovery.Consul.csproj", "{D9E9FBBB-E610-470D-AD91-37785A404940}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{FB1A078B-BD31-4CEA-BDBD-9DDA989E2218}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB1A078B-BD31-4CEA-BDBD-9DDA989E2218}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB1A078B-BD31-4CEA-BDBD-9DDA989E2218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9E9FBBB-E610-470D-AD91-37785A404940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9E9FBBB-E610-470D-AD91-37785A404940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9E9FBBB-E610-470D-AD91-37785A404940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9E9FBBB-E610-470D-AD91-37785A404940}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +110,7 @@ Global
 		{8CCCF4A7-247F-43A0-BCD7-BD62483CCAB7} = {FF4AD249-B4B6-4E9D-87E5-0ADE998C28AF}
 		{C3494193-5202-4EB6-8D92-2307CD7A141F} = {FF4AD249-B4B6-4E9D-87E5-0ADE998C28AF}
 		{FB1A078B-BD31-4CEA-BDBD-9DDA989E2218} = {FF4AD249-B4B6-4E9D-87E5-0ADE998C28AF}
+		{D9E9FBBB-E610-470D-AD91-37785A404940} = {FB70F55A-C727-4373-BECC-522A9B034444}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90EB59F4-F9CF-4586-BA4A-378BBCCD2C93}
