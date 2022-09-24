@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Reflection;
 using System.Xml.Serialization;
@@ -37,6 +38,21 @@ namespace Inbox.Core.Extensions
                 return string.Empty;
 
             return attr.Description;
+        }
+
+        /// <summary>
+        /// 获取对象DisplayAttribute特性的Name
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="inherit"></param>
+        /// <returns></returns>
+        public static string GetDisplayName(this object @this, bool inherit = false)
+        {
+            var attr = @this.GetType().GetCustomAttribute<DisplayAttribute>(inherit);
+            if (attr == null)
+                return string.Empty;
+
+            return attr.Name;
         }
     }
 }

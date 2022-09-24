@@ -12,6 +12,9 @@ namespace Inbox.Core.Extensions
         /// <returns></returns>
         public static string ToDescription(this Enum @this) => @this.GetDescription(false);
 
+
+        public static string ToDisplayName(this Enum @this) => @this.GetDisplayName(false);
+
         /// <summary>
         /// 将具有整数值的指定对象转换为枚举成员
         /// @this 不是 System.SByte、System.Int16、System.Int32、System.Int64、System.Byte、System.UInt16、System.UInt32 和 System.UInt64 类型。

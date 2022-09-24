@@ -2,12 +2,24 @@
 {
     public struct ResultCode
     {
+        /// <summary>
+        /// 未知错误
+        /// </summary>
+        public static readonly int Unknown = -1;
+
+        /// <summary>
+        /// 操作成功
+        /// </summary>
         public static readonly int Success = 0;
 
-        public static int DefaultError = 1000;
+        /// <summary>
+        /// 操作失败
+        /// </summary>
+        public static readonly int Fail = 1;
 
-        public static int Unauthorized => DefaultError + 1;
-
-        public static int InvalidRequest => DefaultError + 2;
+        /// <summary>
+        /// 系统错误
+        /// </summary>
+        public static readonly int SystemError = 10;
     }
 }
