@@ -11,6 +11,35 @@ namespace Inbox.Core.Extensions
     public static class TypeExtensions
     {
         /// <summary>
+        /// 创建指定泛型类型的实例
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static T CreateInstance<T>(this Type type)
+        {
+            var obj = Activator.CreateInstance(type);
+            if (obj is null)
+                return default;
+            return (T)obj;
+        }
+
+        /// <summary>
+        /// 创建指定泛型类型的实例
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="type"></param>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        public static T CreateInstance<T>(this Type type, params object[] args)
+        {
+            var obj = Activator.CreateInstance(type, args);
+            if (obj is null)
+                return default;
+            return (T)obj;
+        }
+
+        /// <summary>
         /// 判断类型是否为可空类型
         /// </summary>
         /// <param name="type"></param>

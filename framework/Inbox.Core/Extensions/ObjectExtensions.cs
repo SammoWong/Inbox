@@ -16,13 +16,11 @@ namespace Inbox.Core.Extensions
         /// <returns></returns>
         public static T DeepClone<T>(this T @this)
         {
-            using (var stream = new MemoryStream())
-            {
-                XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
-                xmlSerializer.Serialize(stream, @this);
-                stream.Seek(0, SeekOrigin.Begin);
-                return (T)xmlSerializer.Deserialize(stream);
-            }
+            using var stream = new MemoryStream();
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
+            xmlSerializer.Serialize(stream, @this);
+            stream.Seek(0, SeekOrigin.Begin);
+            return (T)xmlSerializer.Deserialize(stream);
         }
 
         /// <summary>
